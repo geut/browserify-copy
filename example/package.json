@@ -1,0 +1,6 @@
+{
+    "copyAsset": {
+        "src": "example",
+        "dest": "example/dist"
+    }
+}
