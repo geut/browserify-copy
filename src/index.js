@@ -25,7 +25,7 @@ function brcopy(sm, file, bOpts, asset, opts = {}) {
 
     copy(fileMeta, opts)
         .then((filemeta) => {
-            stream.end('\'' + JSON.stringify(filemeta) + '\'');
+            stream.end(`(new Promise((resolve, reject) => resolve(${JSON.stringify(filemeta)})))`);
         })
         .catch((err) => {
             sm.emit('error', err);

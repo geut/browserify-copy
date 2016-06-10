@@ -13,7 +13,7 @@
     "build": "del-cli dist && babel src --out-dir dist --ignore __tests__",
     "start": "del-cli dist && babel src --watch --source-maps --out-dir dist --ignore __tests__",
     "prepublish": "npm run test && npm run build",
-    "example": "browserify -t ./dist/index.js example/index.js"
+    "example": "live-server --port=3030 --open=example --watch=example/dist & watchify -d -t ./dist/index.js example/index.js -o example/dist/index.js"
   },
   "dependencies": {
     "through2": "^2.0.1"
@@ -31,7 +31,9 @@
     "eslint": "^2.11.1",
     "eslint-config-postcss": "^2.0.2",
     "eslint-config-tinchoz49": "^2.1.0",
-    "static-module": "^1.3.1"
+    "live-server": "^1.0.0",
+    "static-module": "^1.3.1",
+    "watchify": "^3.7.0"
   },
   "eslintConfig": {
     "extends": "tinchoz49"

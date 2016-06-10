@@ -1,4 +1,4 @@
 require('./subfolder/index.js');
 
 var copy = require('copy-asset');
-var test = copy('test.txt');
+copy('test.txt').then((data) => console.log('return: ', data));
