@@ -1,5 +1,5 @@
 {
-  "name": "brcopy",
+  "name": "@geut/browserify-copy",
   "version": "1.0.0",
   "description": "browserify plugin to copy assets files to a custom destination folder and return the new path. (based on postcss-copy)",
   "main": "dist/index.js",
@@ -59,7 +59,8 @@
     "browserify",
     "plugin",
     "copy",
-    "assets"
+    "assets",
+    "browserify-transform"
   ],
   "repository": {
     "type": "git",
